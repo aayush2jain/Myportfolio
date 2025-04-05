@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function LandingPage() {
   return (
@@ -8,7 +9,7 @@ export default function LandingPage() {
         <h1 className="text-3xl font-bold text-indigo-600">Portfolio Generator</h1>
         
         <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          Sign Up
+          <a href="/profile">Sign Up</a>
         </button>
       </nav>
       {/* Hero Section */}
@@ -54,8 +55,7 @@ function FeatureCard({ title, desc }) {
     </div>
   );
 }
-
-function TemplateCard({ image, title,link }) {
+ function TemplateCard({ image, title,link }) {
   return (
     <div className="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
       <img src={image} alt={title} className="w-full h-40 object-cover" />
