@@ -9,7 +9,7 @@ export default function LandingPage() {
         <h1 className="text-3xl font-bold text-indigo-600">Portfolio Generator</h1>
         
         <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          <a href="/profile">Sign Up</a>
+          <a href="/profile">Profile</a>
         </button>
       </nav>
       {/* Hero Section */}
