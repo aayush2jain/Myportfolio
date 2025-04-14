@@ -16,9 +16,9 @@ export default function LandingPage() {
       <section className="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
         <h1 className="text-5xl font-bold">Create Your Perfect Portfolio</h1>
         <p className="mt-4 text-lg">Build, customize, and publish your portfolio in minutes.</p>
-        <button className="mt-6 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+        {/* <button className="mt-6 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
           Get Started
-        </button>
+        </button> */}
       </section>
 
       {/* Features Section */}
