@@ -1,74 +1,137 @@
-import Image from "next/image";
-import { redirect } from "next/navigation";
-
+import FeatureCard from "./components/cards/feature_card";
+import TypingEffect from "./components/typing/typingeffect";
+import ResponsiveParticleCanvas from "./components/particle/responsive_window";
+import BlogCard from "./components/cards/card";
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-100">
-       {/* Navbar */}
-       <nav className="bg-white shadow-md py-2 px-8 flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-indigo-600">Portfolio Generator</h1>
-        
-        <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          <a href="/profile">Profile</a>
+    <div className=" relative min-h-screen bg-gradient-to-r from-blue-200 to-gray-500">
+      {/* Navbar */}
+      <nav className="fixed w-full top-0 flex justify-center items-center overflow-visible z-50 h-15 bg-[linear-gradient(to_bottom,_black,_#2e2e2e,_#666666)] opacity-60 backdrop-blur-xl">
+        <h1 className="text-3xl font-bold tracking-wider text-white">
+          CREATIFY
+        </h1>
+        <button className="absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-10 mx-5 bg-indigo-600 text-white text-md rounded-full hover:bg-indigo-700">
+          <a href="/profile">PROFILE</a>
         </button>
       </nav>
-      {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-        <h1 className="text-5xl font-bold">Create Your Perfect Portfolio</h1>
-        <p className="mt-4 text-lg">Build, customize, and publish your portfolio in minutes.</p>
-        {/* <button className="mt-6 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          Get Started
-        </button> */}
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 text-center">
-        <h2 className="text-3xl font-semibold">Why Use Our Portfolio Generator?</h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-8">
-          <FeatureCard title="Easy Customization" desc="Edit text, images, and styles with a simple interface." />
-          <FeatureCard title="Multiple Templates" desc="Choose from a variety of modern portfolio designs." />
-          <FeatureCard title="Instant Publishing" desc="Deploy your portfolio instantly with a single click." />
+      {/* Hero Section */}
+      <section className="relative z-5 top-0 text-center bg-transparent h-[100vh] overflow-hidden">
+        <div className="absolute w-full z-10 overflow-visible inset-0 pointer-events-none">
+          <ResponsiveParticleCanvas />
+        </div>
+        <div className="absolute -top-125 w-250 h-250 -left-125 rounded-full bg-red-500 left-1/2 transform -translate-x-1/2 overflow-visible z-3"></div>
+        {/* <div className="absolute -top-62 w-125 h-125 -left-62 rounded-full bg-red-500 left-1/2 transform -translate-x-1/2 overflow-visible z-35"></div> */}
+
+        {/* <div className="w-150 absolute h-150 -bottom-30 z-2 -right-30 bg-black rounded-full items-center overflow-visible ">kjhgfd</div> */}
+        <div className="absolute inset-0 z-50 flex flex-col justify-center">
+          <div className="text-6xl tracking-widest font-extrabold md:font-thin sm:text-9xl text-black">
+            CREATIFY
+          </div>
+
+          <div className=" w-5/6 mx-auto p-6 ">
+            <h1 className="text-5xl font-bold tracking-wider text-white">
+              Create Your Perfect Portfolio
+            </h1>
+            <div className="h-5 mt-4">
+              <TypingEffect
+                texts={[
+                  "Build, customize, and publish your portfolio in minutes.",
+                  "Stand out with beautiful designs tailored to you.",
+                  "Launch your dream career with a stunning online presence.",
+                  "Create. Showcase. Inspire.",
+                  "No code, no hassle — just pure creativity.",
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
+      <hr className="border-white w-5/6 my-10 mx-auto rounded-full border-2 " />
+
+      {/* Features Section */}
+      <section className="pb-16 text-center">
+        <h2 className="text-5xl mb-10 font-semibold">
+          Why Choose{" "}
+          <span className="text-red-400 tracking-wide">CREATIFY</span>?
+        </h2>
+        <div className="mt-8 flex flex-wrap gap-10 justify-center w-5/6 mx-auto">
+          <FeatureCard
+            title="Easy Customization"
+            desc="Tailor every aspect of your portfolio — colors, fonts, images, layouts — all with a simple, intuitive editor."
+          />
+          <FeatureCard
+            title="Multiple Templates"
+            desc="Select from a curated gallery of modern, responsive templates designed for every profession and passion."
+          />
+          <FeatureCard
+            title="Instant Publishing"
+            desc="Go live in seconds! Share your portfolio with recruiters, clients, and the world with a single click."
+          />
+          <FeatureCard
+            title="SEO Optimized"
+            desc="Built-in SEO tools to help your portfolio rank higher and reach a wider audience organically."
+          />
+          <FeatureCard
+            title="Mobile Friendly"
+            desc="Your portfolio will look stunning on all devices — mobiles, tablets, and desktops."
+          />
+          <FeatureCard
+            title="Free Hosting"
+            desc="No hidden costs. Host your portfolio for free on our reliable and secure servers."
+          />
+        </div>
+      </section>
+      <hr className="border-white w-5/6 my-10 mx-auto rounded-full border-2 " />
+
       {/* Templates Preview Section */}
-      <section className="py-16 bg-gray-200 text-center">
-        <h2 className="text-3xl font-semibold">Choose Your Template</h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-6">
-          <TemplateCard image="template1.png" title="Modern" link = 'https://soumyajit.vercel.app/' />
+      <section className="py-16 border-3 border-black m-20 flex flex-col gap-30 bg-transparent justify-center">
+        <h2 className="text-5xl mx-auto text-black ">Explore Our Templates</h2>
+        <div className="flex flex-row flex-wrap justify-center gap-10 w-5/6 mx-auto ">
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="A sleek and minimal design perfect for creatives, freelancers, and designers aiming for a strong first impression."
+            title="Minimalist Vibes"
+            link="https://soumyajit.vercel.app/"
+          />
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="A modern and elegant template crafted for tech enthusiasts, developers, and startups."
+            title="Tech Pulse"
+            link="https://soumyajit.vercel.app/"
+          />
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="A bold, vibrant template for artists, photographers, and visual storytellers who want to captivate audiences."
+            title="Creative Burst"
+            link="https://soumyajit.vercel.app/"
+          />
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="A bold, vibrant template for artists, photographers, and visual storytellers who want to captivate audiences."
+            title="Creative Burst"
+            link="https://soumyajit.vercel.app/"
+          />
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="A clean and corporate style suited for consultants, entrepreneurs, and professionals."
+            title="Business Elite"
+            link="https://soumyajit.vercel.app/"
+          />
+          <BlogCard
+            image="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
+            description="An artistic portfolio template combining simplicity and sophistication for personal brands."
+            title="Elegant Bloom"
+            link="https://soumyajit.vercel.app/"
+          />
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-6 bg-gray-900 text-center text-white">
-        <p>&copy; 2025 Portfolio Generator. All rights reserved.</p>
+        <p>&copy; 2025 CREATIFY. All rights reserved.</p>
       </footer>
     </div>
   );
 }
-
-function FeatureCard({ title, desc }) {
-  return (
-    <div className="max-w-xs p-6 bg-white rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-gray-600">{desc}</p>
-    </div>
-  );
-}
- function TemplateCard({ image, title,link }) {
-  return (
-    <div className="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
-      <img src={image} alt={title} className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h3 className="text-lg mb-2 font-semibold">{title}</h3>
-        <a target="_blank" href={link} className="mt-3 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          Preview
-        </a><br></br>
-        <div  className="mt-3 px-1 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          <a target="_blank" className="px-3" href="https://portfolio-query.vercel.app/portfolio">Select Template</a>
-        </div>
-      </div>
-    </div>
-  );
-}
-
