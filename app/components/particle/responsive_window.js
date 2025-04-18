@@ -5,13 +5,14 @@ import ParticleCanvas from './particle';
 
 const ResponsiveParticleCanvas = () => {
   // Holds current window width.
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState('');
 
   useEffect(() => {
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
+    setWindowWidth(window.innerWidth); // Set initial width 
     window.addEventListener('resize', handleResize);
     // Clean up the event listener on unmount.
     return () => {

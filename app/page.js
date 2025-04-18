@@ -25,7 +25,7 @@ export default function LandingPage() {
 
         {/* <div className="w-150 absolute h-150 -bottom-30 z-2 -right-30 bg-black rounded-full items-center overflow-visible ">kjhgfd</div> */}
         <div className="absolute inset-0 z-50 flex flex-col justify-center">
-          <div className="text-6xl tracking-widest font-extrabold md:font-thin sm:text-9xl text-black">
+          <div className="text-5xl sm:text-7xl tracking-widest font-extrabold md:font-thin md:text-9xl text-black">
             CREATIFY
           </div>
 
@@ -86,7 +86,7 @@ export default function LandingPage() {
       <hr className="border-white w-5/6 my-10 mx-auto rounded-full border-2 " />
 
       {/* Templates Preview Section */}
-      <section className="py-16 border-3 border-black m-20 flex flex-col gap-30 bg-transparent justify-center">
+      <section className="py-16 border-3 border-black mx-2 md:mx-20 my-20 flex flex-col gap-30 bg-transparent justify-center">
         <h2 className="text-5xl mx-auto text-black ">Explore Our Templates</h2>
         <div className="flex flex-row flex-wrap justify-center gap-10 w-5/6 mx-auto ">
           <BlogCard
