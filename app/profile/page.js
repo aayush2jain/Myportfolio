@@ -12,12 +12,10 @@ export default function LoginButton() {
       const userEmail = session.user.email;
       const fetchDetails = async () => {
         try {
-          const response = await axios.get(
-            "https://portfolioback-kappa.vercel.app/getuser",
-            {
-              params: { email: userEmail },
-            }
-          );
+          const response = await axios.get("https://portfolioback-kappa.vercel.app/getuser", {
+  params: { email: userEmail },
+  withCredentials: true, // ✅ fixed spelling and placement
+});
           console.log("User data:", response.data.userDetails);
           setUserdata(response.data.userDetails);
           console.log("Userset data:", userData);
