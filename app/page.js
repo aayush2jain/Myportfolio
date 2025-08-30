@@ -8,7 +8,7 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="fixed w-full top-0 flex justify-center items-center overflow-visible z-50 h-15 bg-[linear-gradient(to_bottom,_black,_#2e2e2e,_#666666)] opacity-60 backdrop-blur-xl">
         <h1 className="text-3xl font-bold tracking-wider text-white">
-          CREATIFY
+          PORTIGO
         </h1>
         <button className="absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-10 mx-5 bg-indigo-600 text-white text-md rounded-full hover:bg-indigo-700">
           <a href="/profile">PROFILE</a>

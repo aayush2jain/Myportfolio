@@ -14,7 +14,7 @@ export default function LoginButton() {
         try {
           const response = await axios.get("https://portfolioback-kappa.vercel.app/getuser", {
   params: { email: userEmail },
-  withCredentials: true, // ✅ fixed spelling and placement
+  withCredentials: true,
 });
           console.log("User data:", response.data.userDetails);
           setUserdata(response.data.userDetails);
@@ -57,7 +57,7 @@ export default function LoginButton() {
                   title="Modern"
                   editlink={`https://editportfolio.vercel.app/${user.id}`}
                   previewlink={`https://portfoliotemp1.vercel.app/${user.id}`}
-                  visitors={user.visitors}
+                  visitors={user.visitor_count}
                 />
               ))}
               {/* <TemplateCard image="template1.png" title="Modern" link = 'https://soumyajit.vercel.app/' />
