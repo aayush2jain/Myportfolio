@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function VisitorPage({ params }) {
     const [data, setData] = useState(null);
+    console.log("params", params);
     useEffect(()=>{
        const fetchData = async () => {
            const response = await axios.get('https://portfolioback-kappa.vercel.app/getvisitor',{params:{id:params.id},withCredentials:true});
@@ -12,7 +13,7 @@ export default function VisitorPage({ params }) {
        };
        fetchData();
     }, []);
-   console.log(data);
+   console.log("data",data);
 
     return (
         <div>
