@@ -58,6 +58,7 @@ export default function LoginButton() {
                   editlink={`https://editportfolio.vercel.app/${user.id}`}
                   previewlink={`https://portfoliotemp1.vercel.app/${user.id}`}
                   visitors={user.visitor_count}
+                  v={user.id}
                 />
               ))}
               {/* <TemplateCard image="template1.png" title="Modern" link = 'https://soumyajit.vercel.app/' />
@@ -89,7 +90,7 @@ export default function LoginButton() {
     </div>
   );
 }
-function TemplateCard({ image, title, previewlink, editlink, visitors }) {
+function TemplateCard({ image, title, previewlink, editlink, visitors,v }) {
   return (
     <div className="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
       <img src={image} alt={title} className="w-full h-40 object-cover" />
@@ -109,7 +110,7 @@ function TemplateCard({ image, title, previewlink, editlink, visitors }) {
           </a>
         </div>
         <div className="mt-3 px-1 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          <h1>Visitor Count:{visitors}</h1>
+          <a target="_blank"  href={`https://portfoliotemp1.vercel.app/visitor/${v}`}><h1>Visitor Count:{visitors}</h1></a>
         </div>
       </div>
     </div>
