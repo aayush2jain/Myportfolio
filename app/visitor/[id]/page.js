@@ -1,5 +1,7 @@
+"use client"
 import axios from "axios";
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function VisitorPage({ params }) {
     const [data, setData] = useState(null);
