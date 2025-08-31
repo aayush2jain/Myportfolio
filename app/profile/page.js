@@ -111,7 +111,7 @@ function TemplateCard({ image, title, previewlink, editlink, visitors,visitorlin
           </a>
         </div>
         <div className="mt-3 px-1 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          <a target="_blank"  href={visitorlink}>Visitor Count: {visitors}</a>
+          <a target="_blank"  href={visitorlink}>Visitor Coun: {visitors}</a>
         </div>
       </div>
     </div>
