@@ -2,12 +2,12 @@
 import Image from "next/image"
 import React from "react"
 import { useState ,useRef,useEffect} from "react";
-import { Code, Sparkles, LineChart, Monitor } from "lucide-react";
+import {User, Code, Sparkles, LineChart, Monitor } from "lucide-react";
 import { Plus, Minus } from "lucide-react";
 import Stats from "../components/stats";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+// import TypingEffect from "../components/typing/typingeffect";
 gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   const heroImage = "/hero.png";
@@ -70,10 +70,12 @@ export default function Hero() {
       icon: <Monitor className="w-8 h-8 " />,
     },
   ];
+  const template2 = "/template2.png";
+  const template3 = "/template3.png";
   const templates = [
-  { id: 1, name: "Pro Creative 1", img: templateImage },
-  { id: 2, name: "Pro Creative 2", img: templateImage },
-  { id: 3, name: "Pro Creative 3", img: templateImage },
+  { id: 1, name: "Pro Creative 1", img: templateImage,link1:"https://portfolio-query.vercel.app/portfolio",link2:"https://soumyajit.vercel.app" },
+  { id: 2, name: "Pro Creative 2", img: template3,link1:"https://vcard-rho-pink.vercel.app",link2:"https://resumetemp-henna.vercel.app" },
+  { id: 3, name: "Pro Creative 3", img: template2,link1:"https://pedrotemp.vercel.app",link2:"https://pedro-ashen.vercel.app" },
 ];
 const [openIndex, setOpenIndex] = useState(0);
 
@@ -169,9 +171,13 @@ const [openIndex, setOpenIndex] = useState(0);
       <div className="absolute inset-0 bg-gradient-to-tr from-black to-black/10"></div>
 
       {/* Content */}
-      <div className="absolute text-5xl z-10 max-w-3xl text-white top-[10vh]  px-6">
-        <h1 className="tracking-widest font-medium">PORTIGO</h1>
-      </div>
+     <div className="absolute z-10 top-[6vh] w-full px-6 flex justify-between items-center  text-white">
+      {/* Left side (title) */}
+      <h1 className="tracking-widest font-medium text-5xl">PORTIGO</h1>
+
+      {/* Right side (profile icon) */}
+      <a href="/profile"><User className="w-10  h-10 cursor-pointer hover:scale-110 transition-transform duration-200" /></a>
+    </div>
       <div  className="absolute z-10 max-w-3xl bottom-[30vh]  px-6">
         {/* Badge */}
         {/* <span className="inline-block border border-black text-gray-400 text-sm px-4 py-1 rounded-full mb-6">
@@ -185,16 +191,19 @@ const [openIndex, setOpenIndex] = useState(0);
 
         {/* Subtext */}
         <p className="mt-4 font-normal text-xl md:text-2xl text-gray-300">
+          {/* <TypingEffect text={["Beautiful templates, zero code, instant hosting.",
+            "Beautiful templates, zero code, instant hosting."
+          ]} /> */}
           Beautiful templates, zero code, instant hosting.
         </p>
 
         {/* Buttons */}
         <div ref={appearRef} className="mt-8 opacity-0 flex flex-col sm:flex-row  gap-4">
-          <a href="#templates"><button className="bg-[#2A2422] hover:bg-slate-800 hover:cursor-pointer border-2 border-white font-normal  text-white px-6 py-3 rounded-full transition">
+          <a href="#templates"><button className=" transition-all  duration-400 hover:bg-white hover:text-black hover:cursor-pointer border-2 border-white font-normal  text-white px-6 py-3 rounded-full ">
             Get Started
           </button>
           </a>
-          <a href="#getstarted"><button className="text-gray-200 border-2 hover:cursor-pointer border-white rounded-4xl hover:text-white px-6 py-3 font-medium">
+          <a href="#getstarted"><button className="text-gray-200 transition-all  duration-400 hover:bg-white hover:text-black border-2 hover:cursor-pointer border-white rounded-4xl  px-6 py-3 font-medium">
             See how it works
           </button>
           </a>
@@ -293,12 +302,15 @@ started
                template1
               </h2>
               <div className="flex gap-1">
-                <button className="border border-gray-700 text-gray-300 py-1 px-3 rounded-3xl font-medium transition">
+                <a target="_blank" href={template.link2}><button className="border hover:cursor-pointer border-gray-700 text-gray-300 py-1 px-3 rounded-3xl font-medium transition">
                   Preview
                 </button>
-                <button className=" bg-amber-700 hover:bg-amber-600 py-1 text-gray-200 px-4 rounded-xl font-normal transition">
-                  Use Template
-                </button>
+                </a>
+                <a target="_blank" href={template.link1}>
+                  <button className=" bg-amber-700 hover:cursor-pointer hover:bg-amber-600 py-1 text-gray-200 px-4 rounded-xl font-normal transition">
+                    Use Template
+                  </button>
+                </a>
               </div>
             </div>
           </div>
