@@ -280,7 +280,7 @@ started
         </h1>
       </div>
       <section id="templates" className="">
-      <div className="max-w-7xl mx-auto mb-[20vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className=" mx-auto mb-[20vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {templates.map((template) => (
           <div
             key={template.id}
