@@ -264,7 +264,7 @@ const [openIndex, setOpenIndex] = useState(0);
       </div>
     </section>
     <section className="px-[2vw]">
-      <div  className="flex md:flex-row flex-col-reverse items-center gap-[8vw]  max-w-7xl mx-auto px-6 py-16 ">
+      <div  className="flex md:flex-row flex-col items-center gap-[8vw]  max-w-7xl mx-auto px-6 py-16 ">
         {/* <div className="text-5xl font-serif ">
           <h1 className="font-bold w-auto">Make any template</h1>
           <h1 className="font-bold w-full">yours with ease.</h1>
@@ -273,7 +273,7 @@ const [openIndex, setOpenIndex] = useState(0);
           Make any template <br className="hidden md:block" />
           yours with ease.
         </h1>
-        <h1 className="w-[40%] text-center">
+        <h1 className=" w-full md:w-[40%] md:text-center">
           Weather you know coding and development or not, you can use
 Portigo's customizable and responsive website templates to get
 started
@@ -284,7 +284,7 @@ started
         {templates.map((template) => (
           <div
             key={template.id}
-            className="bg-white w-[30vw] rounded-xl overflow-hidden shadow-lg"
+            className="bg-white w-full md:w-[30vw] rounded-xl overflow-hidden shadow-lg"
           >
             {/* Image */}
             <div className="relative w-full h-[30vh]">
