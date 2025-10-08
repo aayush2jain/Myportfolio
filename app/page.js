@@ -12,6 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   const heroImage = "/hero.png";
   const templateImage = "/template1.png";
+  const image1 = "/image1.webp";
+  const image2 = "/image1.jpg";
+  const image3 = "/image3.webp";
   const faqs = [
   {
     question: "Do I need coding experience to use Portigo?",
@@ -302,12 +305,12 @@ started
                template1
               </h2>
               <div className="flex gap-1">
-                <a target="_blank" href={template.link2}><button className="border hover:cursor-pointer border-gray-700 text-gray-300 py-1 px-3 rounded-3xl font-medium transition">
+                <a target="_blank" href={template.link2}><button className="border hover:text-gray-100 hover:cursor-pointer border-gray-700 text-gray-300 py-1 px-3 rounded-3xl font-medium transition">
                   Preview
                 </button>
                 </a>
                 <a target="_blank" href={template.link1}>
-                  <button className=" bg-amber-700 hover:cursor-pointer hover:bg-amber-600 py-1 text-gray-200 px-4 rounded-xl font-normal transition">
+                  <button className=" hover:bg-white hover:text-black  hover:cursor-pointer border-2 border-gray-300 py-1 text-gray-200 px-4 rounded-xl font-medium transition-all duration-300">
                     Use Template
                   </button>
                 </a>
@@ -358,7 +361,7 @@ started
         {/* Right Image */}
         <div className="flex-1 flex justify-center">
           <Image
-            src={heroImage}
+            src={image1}
             alt="Portfolio Preview"
             className="rounded-lg shadow-lg"
             width={600}
@@ -381,7 +384,7 @@ started
         {/* Right Image */}
         <div className="flex-1 flex  justify-center">
           <Image
-            src={heroImage}
+            src={image3}
             alt="Portfolio Preview"
             className="rounded-lg shadow-lg"
             width={600}
@@ -404,7 +407,7 @@ started
         {/* Right Image */}
         <div className="flex-1 flex justify-center">
           <Image
-            src={heroImage}
+            src={image2}
             alt="Portfolio Preview"
             className="rounded-lg shadow-lg"
             width={600}

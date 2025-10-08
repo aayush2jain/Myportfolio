@@ -35,7 +35,7 @@ export default function LoginButton() {
           <nav className="bg-white shadow-md py-2 px-8 flex justify-between items-center">
             <a href="/">
               <h1 className="text-3xl font-bold text-indigo-600">
-                Portfolio Generator
+                PORTIGO
               </h1>
             </a>
             <button
@@ -72,7 +72,7 @@ export default function LoginButton() {
           <nav className="bg-white shadow-md py-2 px-8 flex justify-between items-center">
             <a href="/">
               <h1 className="text-3xl font-bold text-indigo-600">
-                Portfolio Generator
+                PORTIGO
               </h1>
             </a>
 
